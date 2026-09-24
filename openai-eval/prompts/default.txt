@@ -1,0 +1,13 @@
+Below is the {input_kind} of the function `{func_name}`. It comes from a {language} program compiled for x86-64 Linux with GCC at -{opt}.
+
+```
+{input}
+```
+
+{deps}Reconstruct {language} source code for `{func_name}` that compiles and behaves the same as the original: the same results and side effects for the same inputs.
+
+Rules:
+- Keep the name `{func_name}` and a signature compatible with how the original is called.
+- Write the natural, readable code a programmer would have written. Your code will be tested by compiling and running it, not by comparing machine code, so do not try to reproduce the compiler's exact code generation (instruction order, register use, inlining, memory allocation or loop unrolling). Optimized builds often look very different from their source; work out what the function computes and write that.
+- Write only `{func_name}` itself. Any #include lines, helper functions, types and constants it relies on already exist in the file, so do not redefine them, and do not write main() or tests.
+- Reply with the code in a single ```{fence} fenced block.

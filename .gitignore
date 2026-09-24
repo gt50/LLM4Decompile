@@ -1,5 +1,6 @@
 # Custom
 .vscode
+openai-eval/outputs/
 /*.jsonl
 /*.json
 /*.sh

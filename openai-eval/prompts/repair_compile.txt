@@ -1,0 +1,24 @@
+Below is the {input_kind} of the function `{func_name}`. It comes from a {language} program compiled for x86-64 Linux with GCC at -{opt}.
+
+```
+{input}
+```
+
+A previous attempt to reconstruct its {language} source was:
+
+```{fence}
+{code}
+```
+
+That attempt does not compile:
+
+```
+{errors}
+```
+
+Write a corrected version of `{func_name}` that compiles and behaves the same as the original function above.
+
+Rules:
+- Keep the name `{func_name}` and a signature compatible with how the original is called.
+- Write only `{func_name}` itself. Any #include lines, helper functions, types and constants it relies on already exist in the file, so do not redefine them, and do not write main() or tests.
+- Reply with only the code in a single ```{fence} fenced block: no explanation, and no comments about your reasoning.

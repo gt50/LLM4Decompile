@@ -1,0 +1,15 @@
+Here is a {language} function:
+
+```{fence}
+{code}
+```
+
+Write a small {language} test program that calls `{func_name}` on 8 varied inputs and prints the results. It will be compiled and linked against a separately compiled `{func_name}`.
+
+Rules:
+- Start with the #include lines you need, then declare `{func_name}` with exactly this signature (do not define it):
+  {signature};
+- Then write main(). Choose inputs that exercise different paths: typical values, edge cases (empty or zero-length inputs, a single element, negative numbers, zero, duplicates, boundaries) and at least one larger input. Keep every input valid for the function, e.g. array lengths must match the length arguments and output buffers must be big enough.
+- Print one line per call: `call <n>: <inputs> -> <result>`. Include the return value and anything the function writes through pointer arguments (output arrays, modified strings, counts). Use %d/%ld/%u for integers, %.6g for floating point, %s for strings (print NULL pointers as NULL). Free any memory the function returns.
+- No randomness, no reading input, no other output.
+- Reply with the code in a single ```{fence} fenced block and nothing else.

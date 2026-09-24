@@ -1,0 +1,23 @@
+Below is the {input_kind} of the function `{func_name}`. It comes from a {language} program compiled for x86-64 Linux with GCC at -{opt}.
+
+```
+{input}
+```
+
+A previous attempt to reconstruct its {language} source was:
+
+```{fence}
+{code}
+```
+
+We compiled that attempt and ran it side by side with the original compiled function, calling both with the same inputs. They do not behave the same:
+
+{feedback}
+
+Compare the assembly with the attempt, find where the logic differs, and write a corrected version of `{func_name}`.
+
+Rules:
+- Keep the name `{func_name}` and a signature compatible with how the original is called; fix the parameters if they are wrong.
+- Write the natural, readable code a programmer would have written; do not try to reproduce the compiler's exact instructions.
+- Write only `{func_name}` itself. Any #include lines, helper functions, types and constants it relies on already exist in the file, so do not redefine them, and do not write main() or tests.
+- Reply with only the code in a single ```{fence} fenced block: no explanation, and no comments about your reasoning.
